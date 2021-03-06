@@ -1,5 +1,6 @@
 package com.nbcb.mytomcat.catalina.core;
 
+import com.nbcb.mytomcat.catalina.session.PersistentManager;
 import com.nbcb.mytomcat.catalina.session.StandardManager;
 import org.apache.catalina.*;
 import org.apache.catalina.deploy.*;
@@ -1058,7 +1059,7 @@ public class StandardContext implements Context, Pipeline, Lifecycle {
          * 一般可以在BootStrap中设置
          */
         if(null == getManager()){
-            setManager(new StandardManager());
+            setManager(new PersistentManager());
         }
 
         /**

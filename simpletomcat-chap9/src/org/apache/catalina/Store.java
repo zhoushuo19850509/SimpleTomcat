@@ -67,6 +67,7 @@ package org.apache.catalina;
 
 import java.beans.PropertyChangeListener;
 import java.io.IOException;
+import java.util.List;
 
 
 /**

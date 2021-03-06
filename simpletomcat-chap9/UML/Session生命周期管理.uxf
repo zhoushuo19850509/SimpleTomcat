@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>230</y>
+      <w>170</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>StandardManager
+--
+run()
+start()
+processExpires()
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>110</x>
+      <y>110</y>
+      <w>320</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>这个文档,主要介绍了Session生命周期管理
+包括session创建/过期/持久化/加载等等
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>510</y>
+      <w>190</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>PersistentManager
+--
+run()
+start()
+processExpires()
+processMaxIdleSwaps
+processMaxActiveSwaps()
+processMaxIdleBackups()
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>350</y>
+      <w>140</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>ManagerBase
+--
+add()
+remove()
+findSession()
+findSessions()
+createSession()
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>270</y>
+      <w>190</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>410</y>
+      <w>180</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>160.0;190.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>660</x>
+      <y>540</y>
+      <w>360</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>持久化Manager,主要功能是将那些不适合放在内存的session,放到持久化层.
+这个Manager主要是应对那种高并发的场景.
+Manager启动的时候,会启动一个异步线程,这个异步线程定期检测内存中的Session.
+将那些空闲时间过久/数量过多的session回收到持久化层.
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

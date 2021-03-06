@@ -3,6 +3,8 @@ package com.nbcb.mytomcat.catalina.startup;
 import com.nbcb.mytomcat.catalina.connector.HttpConnector;
 import com.nbcb.mytomcat.catalina.core.*;
 import com.nbcb.mytomcat.catalina.loader.WebappLoader;
+import com.nbcb.mytomcat.catalina.session.FileStore;
+import com.nbcb.mytomcat.catalina.session.PersistentManager;
 import com.nbcb.mytomcat.catalina.session.StandardManager;
 import org.apache.catalina.*;
 import org.apache.catalina.logger.FileLogger;
@@ -115,9 +117,18 @@ public class BootStrap {
          * 设置context的manager
          * 用于后续servlet类通过context获取manager类，继而访问session对象
          */
-        Manager manager = new StandardManager();
-        context.setManager(manager);
+        /**
+         * Manager1 StandardManager
+         */
+//        Manager manager = new StandardManager();
 
+        /**
+         * Manager2 PersistentManager
+         */
+        PersistentManager manager = new PersistentManager();
+        manager.setStore(new FileStore());
+
+        context.setManager(manager);
         try {
             connector.initialize();
             connector.start();

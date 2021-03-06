@@ -1,5 +1,6 @@
 package com.nbcb.mytomcat.catalina.session;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.apache.catalina.Manager;
 import org.apache.catalina.Session;
 import org.apache.catalina.SessionListener;
@@ -7,6 +8,9 @@ import org.apache.catalina.SessionListener;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionContext;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.security.Principal;
 import java.util.*;
 
@@ -120,20 +124,32 @@ public class StandardSession implements Session, HttpSession
     /**
      * 设置session id
      * 同时，还要做几个事情：
-     * 1.如果Manager中已经存在这个session id 对应的session对象了，
-     *   那就要先删除现有的session，避免新创建的session和老的session冲突
+     * 1.更新Manager管理的session id
+     *   这个背景是这样的，我们调用setId()方法设置某个session的Id，一般是设置新创建session的id
+     *   但是也有一种情况，就是更新某个原有session的Id。
+     *   这时就需要特别小心，因为manager中原来维持的session信息，是以key/value形式保存的：
+     *   <key,value>:<sessionId,Session对象>
+     *   如果我们仅仅只是设置了当前session对象的sessionId属性
+     *   就会出现异常：我们虽然把新设置的sessionId的session对象纳入了manager管理，但是manager还保留了老sessionId的key/value！
+     *   <old sessionId,Session对象>
+     *   <new sessionId,Session对象>
+     *   虽然两个key/value对一个的value是同一个session对象，但是manager中平白多出了一个session对象！
+     *   因此，在将新sessionId对应的session纳入manager管理之前，要先删除老的session ID
      * 2.将新创建的session纳入Manager管理
      * 3.注册session的监听事件(这个后续再补充)
      * @param id The new session identifier
      */
     @Override
     public void setId(String id) {
-        // 设置session id
-        this.sessionId = id;
+
 
         if(null != id && null != this.manager){
             manager.remove(this);
         }
+
+        // 设置session id
+        this.sessionId = id;
+
         if(null != manager){
             manager.add(this);
         }
@@ -267,15 +283,6 @@ public class StandardSession implements Session, HttpSession
         recycle();
     }
 
-    @Override
-    public Object getNote(String name) {
-        return null;
-    }
-
-    @Override
-    public Iterator getNoteNames() {
-        return null;
-    }
 
     /**
      * Session exipre之后，会把Session回收
@@ -301,8 +308,17 @@ public class StandardSession implements Session, HttpSession
         if(null != savedManager && (savedManager instanceof ManagerBase)){
             ((ManagerBase)savedManager).recycle(this);
         }
+    }
 
 
+    @Override
+    public Object getNote(String name) {
+        return null;
+    }
+
+    @Override
+    public Iterator getNoteNames() {
+        return null;
     }
 
     @Override
@@ -383,5 +399,79 @@ public class StandardSession implements Session, HttpSession
     @Override
     public boolean isNew() {
         return this.isNew;
+    }
+
+    /**
+     * 将当前session对象写入stream
+     * stream是啥意思呢？
+     * 1.在FileStore应用场景中，這個stream其實就是FileOutStream，
+     *   将session对象写入文件系统
+     * 2.在JDBCStore应用场景中，这个stream其实就是ByteArrayStream，
+     *   将session对象写入数据库表的binary字段
+     * 3.在DistributedManager中，这个stream也是ByteArrayOutputStream
+     *   将session对象以byte[]的形式，传递到各个分布式节点中
+     * 可以在整个工程中，全局搜索一下writeObject()方法的"Find Usages"
+     * 说白了，这就是一个将session对象转化为byte stream的通用方法
+     * @param stream
+     */
+    void writeObject(ObjectOutputStream stream) throws IOException {
+
+        /**
+         * 把session各个(简单)字段写入stream
+         */
+        stream.writeObject(new Long(createTime));
+        stream.writeObject(new Long(lastAccessTime));
+        stream.writeObject(new Integer(maxInactiveInterval));
+        stream.writeObject(new Boolean(isNew));
+        stream.writeObject(new Boolean(isValid));
+        stream.writeObject(new Long(thisAccessTime));
+        stream.writeObject(sessionId);
+
+
+        /**
+         * 把session的各个attributes写入stream
+         * 具体写入的逻辑参考apache官方实现
+         * 将attribute各个key/value键值对写入文件
+         */
+        // FIXME 把这端逻辑补充上
+    }
+
+    /**
+     * 从InputStream中读取session实例各个字段的信息
+     * @param stream
+     * @throws IOException
+     * @throws ClassNotFoundException
+     */
+    void readObject(ObjectInputStream stream) throws IOException, ClassNotFoundException {
+        createTime = ((Long)stream.readObject()).longValue();
+        lastAccessTime = ((Long)stream.readObject()).longValue();
+        maxInactiveInterval = ((Integer) stream.readObject()).intValue();
+        isNew = ((Boolean) stream.readObject()).booleanValue();
+        isValid = ((Boolean) stream.readObject()).booleanValue();
+        thisAccessTime = ((Long) stream.readObject()).longValue();
+        sessionId = (String) stream.readObject();
+    }
+
+
+    public long getThisAccessTime() {
+        return thisAccessTime;
+    }
+
+    public void setThisAccessTime(long thisAccessTime) {
+        this.thisAccessTime = thisAccessTime;
+    }
+
+    @Override
+    public String toString() {
+        return "StandardSession{" +
+                "sessionId='" + sessionId + '\'' +
+                ", isNew=" + isNew +
+                ", isValid=" + isValid +
+                ", maxInactiveInterval=" + maxInactiveInterval +
+                ", createTime=" + createTime +
+                ", lastAccessTime=" + lastAccessTime +
+                ", thisAccessTime=" + thisAccessTime +
+                ", expire=" + expire +
+                '}';
     }
 }

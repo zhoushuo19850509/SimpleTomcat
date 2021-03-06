@@ -113,6 +113,28 @@ public class ManagerBase implements Manager {
 
 
     /**
+     * 创建一个空的session对象
+     * 具体参考较新版本tomcat的代码，比如9.0.30 ManagerBase.createEmptySession()方法
+     * 这和createSession()方法有何不同呢？
+     * createSession()方法创建session实例后，会做很多事情：
+     * 1.设置Session各个字段的初始值；
+     * 2.将新创建的session对象纳入manager管理；
+     * 3.尝试从Manager回收队列中获取闲置的session对象
+     *
+     * 那么，createEmptySession()一般用在哪些场景呢？
+     * 一个典型的场景就StoreBase.processExpire()
+     * 从持久化层获取session信息后，就会调用这个createEmptySession()方法
+     * 为啥不调用createSession()呢？因为会产生pending null session的问题，具体参考：
+     * "问题6 StoreBase.processExpire()的Pending null session问题"
+     * @return
+     */
+    public Session createEmptySession(){
+        return new StandardSession(this);
+    }
+
+
+
+    /**
      * 创建Session对象实例
      * @return
      */
@@ -199,6 +221,21 @@ public class ManagerBase implements Manager {
         }
     }
 
+    /**
+     * 将session对象从manager中删除
+     * 这个remove()方法和上面的remove()方法有啥不同呢？
+     * 上面的remove()方法是将session id作为key，从sessions map<key,value>中删除元素的
+     * 而removePendingSession()方法，是将session对象作为value，从sessions map<key,value>中删除元素的
+     * 主要是为了处理null pending session的情况：
+     * 要删除的session对象的sesionId，和manager管理的sessions map<key,value>中的key不一样
+     * 如果直接根据session对象的sesionId删除的话，就会删除不成功。
+     * @param session
+     */
+    public void removePendingSession(Session session){
+        Collection<Session> list = sessions.values();
+        list.remove(session);
+    }
+
     @Override
     public void removePropertyChangeListener(PropertyChangeListener listener) {
 
@@ -207,5 +244,17 @@ public class ManagerBase implements Manager {
     @Override
     public void unload() throws IOException {
 
+    }
+
+    /**
+     * 获取当前Manager管理的可回收的session
+     * @return
+     */
+    public List<Session> getRecycled() {
+        return recycled;
+    }
+
+    public void setRecycled(List<Session> recycled) {
+        this.recycled = recycled;
     }
 }
