@@ -64,6 +64,13 @@ public class PersistentManagerBase extends ManagerBase
     private int maxActiveSwapCount = 0;
 
     /**
+     * @用于统计
+     * 在本轮异步线程处理中
+     * 有多少session是因为空闲时间过长，备份到持久化层
+     */
+    private int maxIdleBackups = 0;
+
+    /**
      * 1.定期检测失效的session
      * 2.定期将session持久化
      */
@@ -101,6 +108,7 @@ public class PersistentManagerBase extends ManagerBase
         this.maxIdleExpireCount = 0;
         this.maxIdleSwapCount = 0;
         this.maxActiveSwapCount = 0;
+        this.maxIdleBackups = 0;
 
     }
 
@@ -175,7 +183,7 @@ public class PersistentManagerBase extends ManagerBase
     public void processPersistenceChecks(){
         processMaxIdleSwaps();
         processMaxActiveSwaps();
-//        processMaxIdleBackups();
+        processMaxIdleBackups();
     }
 
 
@@ -541,12 +549,29 @@ public class PersistentManagerBase extends ManagerBase
 
 //            System.out.println("sid: " + sid + " 距离最近一次访问过去了: " +duration + " s" );
 
+            /**
+             * 在备份之前，先判断一下，这个session之前是否有备份过
+             * 如果之前已经备份过，并且备份之后没有再被访问过，就无需再重复备份了
+             */
+            if(null !=session.getNote(Constants.PERSISTED_LAST_ACCESSED_TIME)
+               && session.getNote(Constants.PERSISTED_LAST_ACCESSED_TIME) == Long.valueOf(lastAccessTime)){
+                continue;
+            }
+
             if(duration > Constants.MAX_IDLE_BACKUP){
 
                 System.out.println("session(sid:" + sid + ") keep idle too long! " +
                         "Idle time : " + duration + " seconds. " +
                         "Backup to persistence! ");
                 writeSession(session);
+
+                /**
+                 * 备份完成之后，将当时的时间点保存到session的notes属性中
+                 * 防止后续重复备份
+                 */
+                session.setNote(Constants.PERSISTED_LAST_ACCESSED_TIME,Long.valueOf(lastAccessTime));
+
+                maxIdleBackups++;
             }
         }
     }

@@ -129,7 +129,26 @@ public class ManagerBase implements Manager {
      * @return
      */
     public Session createEmptySession(){
-        return new StandardSession(this);
+
+        Session session = null;
+        synchronized (recycled){
+            int size = recycled.size();
+            if(size > 0 ){
+                session = recycled.get(size - 1);
+                recycled.remove(size - 1);
+            }
+        }
+
+        if(null != session){
+            System.out.println("recycled from old session!");
+            session.setManager(this);
+        }else{
+            // ´´½¨sessionÊµÀý
+            System.out.println("create new session from ground up");
+            session = new StandardSession(this);
+        }
+
+        return session;
     }
 
 

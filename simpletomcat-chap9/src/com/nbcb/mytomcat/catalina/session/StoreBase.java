@@ -217,6 +217,14 @@ public abstract class StoreBase implements Lifecycle ,Store ,Runnable{
 
                     System.out.println("session in persistent has expired! sid: " + key);
                     maxIdleExpireCount++;
+                }else{
+                    /**
+                     * 如果从持久层load进来的session没有超时
+                     * 那么还是要把我们临时创建的session回收一下，避免下次load的时候，重复创建新的对象
+                     * 否则我们的异步线程每检测一次持久层中的session，都会创建一个新的对象
+                     * 在高并发条件下可能会对内存有影响
+                     */
+                    session.recycle();
                 }
             }
 

@@ -27,6 +27,9 @@ public class Constants {
     public static final String COOKIE_NAME = "Cookie";
     public static final String JSESSION_ID = "JSESSIONID";
 
+
+    public static final String PERSISTED_LAST_ACCESSED_TIME = "persistedLastAccessTime";
+
     /**
      * Manager每隔多久检查一下当前tomcat管理的session，看session是否过期
      * 后续建议放到配置文件中去 单位是秒
@@ -46,7 +49,7 @@ public class Constants {
      * 一旦一个Session空闲时间超过这个时长，就被设置为超时expire
      * 后续建议放到配置文件中去，单位是秒
      */
-    public static final int MAX_INACTIVE_INTERVAL = 1 * 60;
+    public static final int MAX_INACTIVE_INTERVAL = 2 * 60;
 
 
     /**
@@ -71,7 +74,7 @@ public class Constants {
      * 如果Manager发现某个session的空闲时间超过了MAX_IDLE_SWAP
      * 就把这个session放到持久化层
      */
-    public static final int MAX_IDLE_SWAP = 30;
+    public static final int MAX_IDLE_SWAP = 40;
 
     /**
      * tomcat manager管理的最大session数

@@ -38,6 +38,20 @@ public class StandardSession implements Session, HttpSession
      */
     private Map<String, Object> attributes;
 
+    /**
+     * notes也是session的属性
+     * 和attributes不一样的是，attributes是保存了客户端给session赋予的属性
+     * notes是保存了tomcat内部给session赋予的属性
+     * 一个典型的场景是：
+     * <key/value>为： <PERSISTED_LAST_ACCESSED_TIME,持久层最近一次访问的时间>
+     * 这个属性的意思是，一个session因为在内存中空闲时间比较久，
+     * 被PersistentManagerBase.processMaxIdleBackups()备份到持久层
+     * 在备份完成之后，会将当时的时点保存到notes属性中
+     * 防止这个session被重复备份到持久层
+     * 具体参考PersistentManagerBase.processMaxIdleBackups()中相关逻辑
+     */
+    private Map<String, Object> notes;
+
 
     /**
      * 标识这个session对象是不是刚创建的
@@ -83,6 +97,9 @@ public class StandardSession implements Session, HttpSession
 
         // 初始化attributes map
         this.attributes = new HashMap<String, Object>();
+
+        // 初始化notes
+        this.notes = new HashMap<String, Object>();
     }
 
     @Override
