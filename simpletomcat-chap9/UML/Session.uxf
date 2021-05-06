@@ -59,7 +59,7 @@ expire()
     <coordinates>
       <x>390</x>
       <y>270</y>
-      <w>170</w>
+      <w>160</w>
       <h>160</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -151,7 +151,7 @@ createSession()
     <coordinates>
       <x>1090</x>
       <y>270</y>
-      <w>110</w>
+      <w>100</w>
       <h>120</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -305,7 +305,7 @@ processExpire()
     <coordinates>
       <x>2120</x>
       <y>430</y>
-      <w>90</w>
+      <w>80</w>
       <h>180</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -377,7 +377,7 @@ extend</panel_attributes>
     <coordinates>
       <x>2110</x>
       <y>280</y>
-      <w>110</w>
+      <w>100</w>
       <h>110</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
@@ -515,7 +515,7 @@ extend</panel_attributes>
     <coordinates>
       <x>510</x>
       <y>270</y>
-      <w>170</w>
+      <w>160</w>
       <h>160</h>
     </coordinates>
     <panel_attributes>lt=&lt;-

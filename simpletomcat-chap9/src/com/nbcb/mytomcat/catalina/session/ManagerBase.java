@@ -30,6 +30,8 @@ public class ManagerBase implements Manager {
      */
     private Map<String ,Session> sessions = new HashMap<String,Session>();
 
+    private Container container = null;
+
     /**
      * Manager管理的被回收的Session
      *
@@ -38,11 +40,12 @@ public class ManagerBase implements Manager {
 
     @Override
     public Container getContainer() {
-        return null;
+        return container;
     }
 
     @Override
     public void setContainer(Container container) {
+        this.container = container;
 
     }
 

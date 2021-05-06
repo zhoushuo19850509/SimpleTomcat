@@ -93,4 +93,20 @@ public class Constants {
     public static final int MAX_IDLE_BACKUP = 20;
 
 
+    /**
+     * tomcat集群各个节点之间通信的组播地址
+     */
+    public static final String MULTICAST_ADDRESS = "all-systems.mcast.net";
+
+    /**
+     * tomcat集群各个节点之间通信的端口
+     */
+    public static final int MULTICAST_PORT = 8999;
+
+    /**
+     * 集群名称
+     */
+    public static final String ClUSTER_NAME = "MySimpleTomcat";
+
+
 }

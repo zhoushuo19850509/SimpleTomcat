@@ -1,7 +1,6 @@
 package com.nbcb.mytomcat.catalina.core;
 
 import com.nbcb.mytomcat.catalina.session.PersistentManager;
-import com.nbcb.mytomcat.catalina.session.StandardManager;
 import org.apache.catalina.*;
 import org.apache.catalina.deploy.*;
 import org.apache.catalina.util.CharsetMapper;
@@ -57,7 +56,9 @@ public class StandardContext implements Context, Pipeline, Lifecycle {
     /**
      * session manager
      */
-    private Manager manager;
+    protected Manager manager;
+
+    protected Cluster cluster;
 
     /**
      * constructor
@@ -855,16 +856,22 @@ public class StandardContext implements Context, Pipeline, Lifecycle {
     @Override
     public void setManager(Manager manager) {
         this.manager = manager;
+
+        if(null != null){
+            manager.setContainer(this);
+        }
+
     }
+
 
     @Override
     public Cluster getCluster() {
-        return null;
+        return this.cluster;
     }
 
     @Override
     public void setCluster(Cluster cluster) {
-
+        this.cluster = cluster;
     }
 
     @Override
@@ -1065,10 +1072,16 @@ public class StandardContext implements Context, Pipeline, Lifecycle {
         /**
          * 启动manager
          */
-        if(null != manager){
+        if(null != manager && (manager instanceof Lifecycle)){
             ((Lifecycle)manager).start();
         }
 
+        /**
+         * 启动Cluster
+         */
+        if(null != cluster && (cluster instanceof Lifecycle)){
+            ((Lifecycle)cluster).start();
+        }
 
 
 
@@ -1110,6 +1123,20 @@ public class StandardContext implements Context, Pipeline, Lifecycle {
          */
         if((loader != null) && (loader instanceof Lifecycle) ){
             ((Lifecycle) loader).stop();
+        }
+
+        /**
+         * 关闭manager
+         */
+        if(null != manager && (manager instanceof Lifecycle)){
+            ((Lifecycle)manager).stop();
+        }
+
+        /**
+         * 关闭Cluster
+         */
+        if(null != cluster && (cluster instanceof Lifecycle)){
+            ((Lifecycle)cluster).stop();
         }
 
         log("Simple Context is stopped!");
