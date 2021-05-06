@@ -1,11 +1,15 @@
 package com.nbcb.mytomcat.catalina.startup;
 
+import com.nbcb.mytomcat.catalina.cluster.StandardCluster;
 import com.nbcb.mytomcat.catalina.connector.HttpConnector;
 import com.nbcb.mytomcat.catalina.core.*;
 import com.nbcb.mytomcat.catalina.loader.WebappLoader;
+import com.nbcb.mytomcat.catalina.session.DistributedManager;
 import com.nbcb.mytomcat.catalina.session.FileStore;
 import com.nbcb.mytomcat.catalina.session.PersistentManager;
 import com.nbcb.mytomcat.catalina.session.StandardManager;
+import com.nbcb.mytomcat.catalina.util.Constants;
+import com.sun.tools.internal.jxc.ap.Const;
 import org.apache.catalina.*;
 import org.apache.catalina.logger.FileLogger;
 
@@ -125,10 +129,25 @@ public class BootStrap {
         /**
          * Manager2 PersistentManager
          */
-        PersistentManager manager = new PersistentManager();
-        manager.setStore(new FileStore());
+//        PersistentManager manager = new PersistentManager();
+//        manager.setStore(new FileStore());
 
+        /**
+         * Manager3 DistributedManager
+         */
+        DistributedManager manager = new DistributedManager();
+        manager.setStore(new FileStore());
         context.setManager(manager);
+
+        /**
+         * 如果是选择DistributedManager，那么就要指定集群
+         */
+        StandardCluster cluster = new StandardCluster();
+        cluster.setMulticastAddress(Constants.MULTICAST_ADDRESS);
+        cluster.setMulticastPort(Constants.MULTICAST_PORT);
+        cluster.setClusterName(Constants.ClUSTER_NAME);
+        context.setCluster(cluster);
+
         try {
             connector.initialize();
             connector.start();

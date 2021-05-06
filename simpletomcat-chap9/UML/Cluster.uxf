@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>176</x>
+      <y>0</y>
+      <w>341</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>这个文档主要为了说明Cluster的整体架构
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>517</x>
+      <y>319</y>
+      <w>242</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>StandardCluster
+--
+start()
+run()
+getClusterSender()
+getClusterReceiver()
+getRemoteClusterMembers()
+getLocalClusterMember()
+
+从总体来说,一个Context只会有一个StandardCluster实例
+代表tomcat集群中当前节点.
+StandardCluster的主要功能是创建集群节点实例
+同时将节点信息同步到整个集群其他节点
+
+1.start()
+实现LifeCycle接口,对StandardCluster进行初始化
+(1)初始化ClusterMemberInfo对象(本地节点对象)
+(2)创建ClusterSender对象(MulticastSender)
+(3)创建ClusterReceiver对象(MuticastReceiver)
+(4)通过ClusterSender,将刚刚创建的ClusterMemberInfo对象(本地节点对象),
+   发送个集群其他节点;
+
+2.run()
+异步线程主要是调用processReceive()方法
+通过MulticastReceiver定期
+获取集群其他节点成员的信息(注意:是新增ClusterMemberInfo,
+而不是获取集群其他节点发送的信息)
+
+3.getClusterSender()
+或许称为createClusterSender()方法更好一点
+这个方法就是创建一个ClusterSender(MulticastSender)对象
+
+4.getClusterReceiver()
+或许称为createClusterReceiver()方法更好一点
+这个方法就是创建一个ClusterReceiver(MulticastReceiver)对象
+
+
+5.getRemoteClusterMembers()
+获取集群中其他节点
+
+6.getLocalClusterMember()
+获取本地节点
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>385</x>
+      <y>209</y>
+      <w>319</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+implements</panel_attributes>
+    <additional_attributes>10.0;10.0;270.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>737</y>
+      <w>154</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>MulticastSender
+--
+send(obj)
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>286</x>
+      <y>539</y>
+      <w>132</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+implement</panel_attributes>
+    <additional_attributes>10.0;10.0;50.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>693</x>
+      <y>737</y>
+      <w>154</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>MulticastReceiver
+--
+getObjects()
+run()
+
+
+1.getObjects
+从组播地址获取消息
+
+2.run()
+启动一个异步线程,定期从组播地址拉取消息.
+当然,这个run()方法中想要获取的是集群节点消息
+把拉取到的集群消息放到一个栈(stack)中
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>759</x>
+      <y>539</y>
+      <w>154</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+implement</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>495</x>
+      <y>495</y>
+      <w>154</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>ClusterSessionBase
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>407</x>
+      <y>539</y>
+      <w>187</w>
+      <h>242</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+extends</panel_attributes>
+    <additional_attributes>150.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>561</x>
+      <y>539</y>
+      <w>154</w>
+      <h>242</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+extends</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1243</x>
+      <y>539</y>
+      <w>209</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>DistributedManager
+--
+createSession()
+processClusterReceiver()
+start()
+
+从总体来说,DistributedManager主要是用于集群中各个节点间
+消息的收发.
+
+
+1.start()
+初始化clusterSender/clusterReceiver
+
+2.createSession()
+重载了父类的createSession()方法。
+在创建session之后，调用MulticastSender.send()方法
+将session实例信息同步到集群各个节点；
+需要注意的是:发送前,先要把byte[]通过ReplicationWrapper,把发送消息封装一下
+
+3.processClusterReceiver()
+clusterReceiver定期会检测来自集群节点的session信息
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1683</x>
+      <y>770</y>
+      <w>154</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>ClusterReceiver
+--
+getObjects()
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1683</x>
+      <y>550</y>
+      <w>154</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>ClusterSender
+--
+send(obj)
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1441</x>
+      <y>550</y>
+      <w>264</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+use</panel_attributes>
+    <additional_attributes>220.0;30.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1441</x>
+      <y>561</y>
+      <w>264</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+use</panel_attributes>
+    <additional_attributes>220.0;220.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1683</x>
+      <y>495</y>
+      <w>341</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>createSession使用ClusterSender.send(),
+将新创建的session信息同步给集群中各个节点
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1683</x>
+      <y>715</y>
+      <w>374</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>processClusterReceiver使用ClusterReceiver,
+定期接收来自集群各节点的同步消息
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>638</x>
+      <y>88</y>
+      <w>88</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>LifeCycle
+--
+start()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>891</x>
+      <y>88</y>
+      <w>88</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>Runnable
+--
+run()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>682</x>
+      <y>165</y>
+      <w>121</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+implements</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>682</x>
+      <y>165</y>
+      <w>286</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+implements</panel_attributes>
+    <additional_attributes>240.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>946</x>
+      <y>363</y>
+      <w>154</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>ClusterMemberInfo
+--
+
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>748</x>
+      <y>363</y>
+      <w>220</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+use
+</panel_attributes>
+    <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1683</x>
+      <y>341</y>
+      <w>187</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>StandardCluster
+--
+getClusterSender()
+getClusterReceiver()
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1683</x>
+      <y>275</y>
+      <w>341</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>初始化clusterSender/clusterReceiver
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1441</x>
+      <y>363</y>
+      <w>264</w>
+      <h>231</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+use</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>935</x>
+      <y>297</y>
+      <w>209</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>StandardCluster维护了一个ClusterMember的列表
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>165</x>
+      <y>99</y>
+      <w>242</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>Cluster
+--
+getClusterSender()
+getClusterReceiver()
+getRemoteClusterMembers()
+getLocalClusterMember()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>781</x>
+      <y>462</y>
+      <w>132</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>ClusterReceiver
+--
+getObjects()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>209</x>
+      <y>1166</y>
+      <w>154</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>MulticastSender
+--
+send(obj)
+
+
+
+MulticastSender.send(obj)是MulticastSender对外提供的最常用的功能.
+是一个高级封装的功能.这个功能非常明确,就是把一个对象实例发送给集群组播地址.
+
+怎么实现呢?
+1.将对象转化为byte1[]
+
+2.根据senderId和byte1[]打包成ReplicationWrapper对象
+
+3.将ReplicationWrapper对象转化为byte2[]
+
+4.按照UDP协议,将byte2[]以DataPacket的形式发送给组播地址
+
+整体思路还是比较清楚的</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>770</x>
+      <y>1166</y>
+      <w>154</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>MulticastReceiver
+--
+getObjects()
+run()
+
+
+MulticastReceiver.getObjects()
+是MulticastReceiver对外提供的最常用的方法
+
+这个方法主要利用Receiver从组播地址拉取数据包,并转化为对象
+实现思路如下:
+1.异步线程轮询从组播地址定期拉取数据
+run()
+receive()
+
+2.将拉取的到的DataPacket数据包转化为ReplicationWrapper对象
+
+3.根据senderId,判断接收到的数据包是不是给自己的
+
+4.如果数据包是给自己的,那就放到堆栈中保存起来
+
+5.如果客户端向MulticastReceiver要数据,
+那MulticastReceiver就从堆栈中拿出之前准备好的对象给客户端
+
+整体思路也比较清晰
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>462</x>
+      <y>924</y>
+      <w>176</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>组播地址
+--
+all-systems.mcast.net
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>1012</x>
+      <y>880</y>
+      <w>517</w>
+      <h>319</h>
+    </coordinates>
+    <panel_attributes>Sender和Receiver之间交互的方式详细说明:
+style=wordwrap
+我们知道,MulticastSender/MulticastReceiver是tomcat集群间通信的收发组件
+节点间消息通信的协议是UDP
+但是UDP通信的数据包是byte[],也就是通用的字节流信息.
+那么问题来了,既然是通用的字节流,那么,怎么对消息进行分组呢?
+比如
+场景1 
+我们都知道,StandarCluser初始化的时候(start()方法),会把当前集群节点的信息
+发送给组播地址,通知集群其他节点
+场景2 
+DistributeManager会把提供方法,把当前节点的session信息同步给集群其他节点;
+同时会接收集群中其他节点的session信息.
+
+我们知道UDP协议的package信息发送是all-to-all的,也就是说,一个节点发送的消息
+集群中其他节点都能接收到.
+那么以上两个场景收发的消息是否会混淆呢?
+tomcat是这么做的.
+MulticastSender发送消息前,会把消息打包到ReplicationWrapper类中
+这个类有两个字段:
+1.byte[]
+2.senderId
+
+其中byte[]保存了集群节点间要收发的消息/senderId实现对消息分组的功能
+byte[]没啥好说的,关键就是senderId.senderId标识了
+MulticastSender/MulticastReceiver的名称,
+实现了同一个LAN环境中组播消息的分组功能.
+
+比如场景1和场景2中,两个场景的MulticastSender/MulticastReceiver对象
+都是各自创建的,他们的senderId不一样.
+两组MulticastSender/MulticastReceiver就能够实现消息隔离的目标.
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>231</x>
+      <y>462</y>
+      <w>132</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>ClusterSender
+--
+send()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>275</x>
+      <y>979</y>
+      <w>297</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+ReplicationWrapper</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>979</y>
+      <w>319</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+ReplicationWrapper</panel_attributes>
+    <additional_attributes>270.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>110</x>
+      <y>979</y>
+      <w>275</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>Sender和Receiver之间交互的方式
+style=wordwrap
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>176</x>
+      <y>1529</y>
+      <w>154</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>MulticastSender
+--
+send(obj)
+
+
+在场景1中,MulticastSender用于将新加入的节点信息发送给组播地址
+通知集群中其他节点
+调用方参考代码: 
+StandardCluster.start()
+
+具体逻辑为:
+1.创建MulticastSender实例
+
+clusterSender = getClusterSender(getName());
+
+2.发送消息给组播地址
+clusterSender.send(localClusterMember);
+
+备注:
+这里的senderId名称为:"StandardCluster"</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>737</x>
+      <y>1529</y>
+      <w>154</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>MulticastReceiver
+--
+getObjects()
+run()
+
+在场景1中,MulticastReceiver从组播地址接收集群其他节点的节点信息
+通过MulticastReceiver.processReceive()实现
+
+调用方代码参考:
+StandardCluster.processReceive()
+
+调用方具体逻辑为:
+1.创建MulticastReceiver对象
+clusterReceiver = getClusterReceiver(getName());
+
+2.定期接收来自集群的其他节点信息
+StandardCluster.processReceive()
+
+很显然,场景1中,StandardCluster通过MulticastReceiver接收对象的方式是错的.
+错误的地方在于,
+StandardCluster.processReceive()方法中,
+通过MulticastReceiver.getObjects()方法获取的对象是ReplicationWrapper对象
+并不能直接转化为ClusterMemberInfo节点对象
+
+正确的处理方式要参考:DistributedManager.processClusterReceiver()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>429</x>
+      <y>1342</y>
+      <w>176</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>组播地址
+--
+all-systems.mcast.net
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>242</x>
+      <y>1397</y>
+      <w>297</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+ReplicationWrapper</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>517</x>
+      <y>1397</y>
+      <w>319</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+ReplicationWrapper</panel_attributes>
+    <additional_attributes>270.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>176</x>
+      <y>1364</y>
+      <w>165</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>场景1 同步节点信息
+style=wordwrap
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>187</x>
+      <y>1925</y>
+      <w>154</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>MulticastSender
+--
+send(obj)
+
+在场景2中,MulticastSender的主要功能是将新创建的session对象同步给集群中各个节点
+参考代码为:
+DistributedManager.createSession()
+
+具体实现逻辑为:
+1.先调用super.createSession(),创建一个新的session对象
+
+2.将新创建的session对象转化为byte[]
+
+3.将byte[]通过
+MulticastSender.send()方法,发送到组播地址
+
+整体思路比较清晰
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>748</x>
+      <y>1925</y>
+      <w>154</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>MulticastReceiver
+--
+getObjects()
+run()
+
+在场景2中,MulticastReceiver主要负责从集群拉取消息,主要是其他节点创建的session信息
+
+参考代码:
+DistributedManager.processClusterReceiver()
+
+具体实现逻辑:
+1.调用MulticastReceiver.getObjects()方法从组播地址拉取数据包;
+
+2.将数据包转化为ReplicationWrapper对象
+
+3.拉取ReplicationWrapper对象的byte[]部分的内容
+
+4.将byte[]转化为对象流(ObjectInputStream)
+
+5.将对象流转化为session对象
+
+1.getObjects
+从组播地址获取消息
+
+2.run()
+启动一个异步线程,定期从组播地址拉取消息.
+当然,这个run()方法中想要获取的是集群节点消息
+把拉取到的集群消息放到一个栈(stack)中
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>1683</y>
+      <w>176</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>组播地址
+--
+all-systems.mcast.net
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>253</x>
+      <y>1738</y>
+      <w>297</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+ReplicationWrapper</panel_attributes>
+    <additional_attributes>250.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>528</x>
+      <y>1738</y>
+      <w>319</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+ReplicationWrapper</panel_attributes>
+    <additional_attributes>270.0;170.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>143</x>
+      <y>1727</y>
+      <w>187</w>
+      <h>33</h>
+    </coordinates>
+    <panel_attributes>场景2 同步session信息
+style=wordwrap
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>990</x>
+      <y>1298</y>
+      <w>517</w>
+      <h>319</h>
+    </coordinates>
+    <panel_attributes>Sender/Receiver通信存在的问题
+style=wordwrap
+
+从这两个场景来看,很容易看出来这个模式存在的问题.
+如果只有一个场景,那还好.
+现在有两个场景,都采用UDP方式,那就不合适了.
+因为场景1中需要UDP同步的内容很少(只需要同步节点信息)
+而场景2中需要UDP同步的内容非常多(频繁的session读写操作,需要同步给集群各个节点)
+我们知道,虽然Receiver接收到消息后,会根据senderId判断消息是不是给自己的.
+问题是,场景1 中的receiver会接收到大量对自己没啥用的消息(session同步消息)
+这显然是非常浪费资源的.
+
+因此,以后我们采用UDP模式收发消息的时候,需要特别注意这点.
+另外,UDP方式收发消息的效率,也要再仔细验证一下</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

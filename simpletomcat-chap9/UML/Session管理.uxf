@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>9</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>378</x>
-      <y>189</y>
-      <w>153</w>
-      <h>81</h>
+      <x>456</x>
+      <y>248</y>
+      <w>136</w>
+      <h>72</h>
     </coordinates>
     <panel_attributes>StandardManager
 --
@@ -25,10 +25,10 @@ processExpires()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>63</x>
-      <y>81</y>
-      <w>288</w>
-      <h>90</h>
+      <x>176</x>
+      <y>152</y>
+      <w>256</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>这个文档,主要介绍了如何管理Session
 管理session的是Manager.主要有两类:
@@ -40,10 +40,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>369</x>
-      <y>441</y>
-      <w>171</w>
-      <h>126</h>
+      <x>448</x>
+      <y>472</y>
+      <w>152</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>PersistentManager
 --
@@ -62,10 +62,10 @@ processMaxIdleBackups()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>108</x>
-      <y>297</y>
-      <w>126</w>
-      <h>108</h>
+      <x>216</x>
+      <y>344</y>
+      <w>112</w>
+      <h>96</h>
     </coordinates>
     <panel_attributes>ManagerBase
 --
@@ -85,10 +85,10 @@ createSession()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>225</x>
-      <y>225</y>
-      <w>171</w>
-      <h>153</h>
+      <x>320</x>
+      <y>280</y>
+      <w>152</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
@@ -97,10 +97,10 @@ createSession()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>225</x>
-      <y>351</y>
-      <w>162</w>
-      <h>189</h>
+      <x>320</x>
+      <y>392</y>
+      <w>144</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
 </panel_attributes>
@@ -109,10 +109,10 @@ createSession()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>567</x>
-      <y>189</y>
-      <w>324</w>
-      <h>90</h>
+      <x>624</x>
+      <y>248</y>
+      <w>288</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>标准Manager,主要是管理内存中的session.
 Manager启动的时候,会启动一个异步线程,这个异步线程定期检测内存中的Session.
@@ -123,10 +123,10 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>558</x>
-      <y>468</y>
-      <w>324</w>
-      <h>90</h>
+      <x>616</x>
+      <y>496</y>
+      <w>288</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>持久化Manager,主要功能是将那些不适合放在内存的session,放到持久化层.
 这个Manager主要是应对那种高并发的场景.

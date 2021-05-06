@@ -161,7 +161,7 @@ public final class DistributedManager extends PersistentManagerBase {
     }
 
     /**
-     * Start this manager
+     * Start this managers
      *
      * @exception LifecycleException if an error occurs
      */
@@ -238,7 +238,7 @@ public final class DistributedManager extends PersistentManagerBase {
         }
     }
 
-    /**
+    /**s
      * The background thread that checks for session timeouts and shutdown.
      */
     public void run() {

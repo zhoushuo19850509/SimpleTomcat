@@ -47,10 +47,18 @@ Session作为tomcat的一个重点，还是比较重要的。花点时间在这�
 今天主要是解决StoreBase处理持久化session的BUG。
 处理得不是很顺利，因为这些非功能的需求，测试起来很麻烦。
 
-20210228
-
-
 20210306
 今天终于解决了pending null session的问题，这样session这章大部分内容就解决了。
-通过验证了
 后续就是参考FileStore，实现JDBCStore/RedisStore了
+心中大为畅快
+
+20210307
+今天解决了session相关的2个BUG。
+对这个session作了回顾总结。
+
+后续看看Cluster session相关的内容。
+借此机会可以了解一下集群同步的相关主题。
+
+
+
+

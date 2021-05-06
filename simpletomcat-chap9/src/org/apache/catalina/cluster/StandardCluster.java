@@ -275,7 +275,7 @@ public final class StandardCluster
     /**
      * Set the Port associated with our Cluster
      *
-     * @param port The Port to use
+     * @param multicastPort The Port to use
      */
     public void setMulticastPort(int multicastPort) {
         int oldMulticastPort = this.multicastPort;
@@ -297,7 +297,7 @@ public final class StandardCluster
     /**
      * Set the Groupaddress associated with our Cluster
      *
-     * @param port The Groupaddress to use
+     * @param multicastAddress The Groupaddress to use
      */
     public void setMulticastAddress(String multicastAddress) {
         try {
@@ -456,6 +456,13 @@ public final class StandardCluster
         for(int i=0; i < objs.length;i++) {
             clusterMembers.add((ClusterMemberInfo)objs[i]);
         }
+    }
+
+    /**
+     * 这个方法主要是打印当前集群各个节点的信息
+     */
+    public void printClusterMembersInfo(){
+
     }
 
     // ------------------------------------------------------ Lifecycle Methods

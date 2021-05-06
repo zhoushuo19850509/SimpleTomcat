@@ -1,0 +1,9 @@
+这个package下的代码，主要用于验证chap9分布式session的功能。
+
+1.场景1 验证往组播地址发送、接收集群节点信息
+ClusterInfoSender
+ClusterInfoReceiver
+
+2.场景2 验证往组播地址发送、接收session信息
+SessionInfoSender
+SessionInfoReceiver
