@@ -1,4 +1,4 @@
-package test.cluster;
+package cluster;
 
 
 import com.nbcb.mytomcat.catalina.cluster.ClusterMemberInfo;

@@ -12,6 +12,54 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <build>
+        <plugins>
+            <!-- 设置编译选项 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>GBK</encoding>
+                </configuration>
+            </plugin>
+            <!-- plug2 将POM中依赖项(dependencies)拷贝到target/lib目录下-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                </configuration>
+            </plugin>
+
+            <!-- plug1 指定启动类 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.0.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>com.nbcb.mytomcat.catalina.startup.BootStrap</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
     <dependencies>
         <dependency>
             <groupId>commons-codec</groupId>
@@ -127,6 +175,21 @@
             <groupId>jakarta-regexp</groupId>
             <artifactId>jakarta-regexp</artifactId>
             <version>1.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servervlet</groupId>
+            <artifactId>servlet</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/servlet.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.util</groupId>
+            <artifactId>tomcat-util</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/tomcat-util.jar</systemPath>
         </dependency>
 
 

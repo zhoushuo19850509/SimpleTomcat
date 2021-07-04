@@ -59,6 +59,55 @@ Session作为tomcat的一个重点，还是比较重要的。花点时间在这�
 后续看看Cluster session相关的内容。
 借此机会可以了解一下集群同步的相关主题。
 
+20210505
+今天把ClusterInfoSender、ClusterInfoReceiver调通了，还不错。
+
+20210507
+今天把SessionInfoSender/SessionInfoReceiver写好了，同时也调试通了
+
+下一步计划
+1.把ClusterInfoSender/ClusterInfoReceiver
+和SessionInfoSender/SessionInfoReceiver这两组收发程序在同一个组播地址中测试
+通过senderId进行分组
+
+2.通过虚拟机，模拟由多个节点组成的集群，进行测试
+考察在多个节点的场景下，通过UDP收发消息是否正常，效率是否高。
+是否能够承受高并发的压力
+
+3.尝试将UDP的通信方式改为TCP，比对在高并发场景下的效率
+
+4.总结一下object对象在网络间传输的最佳实践
+这个应该和Serialize接口有关，后续可以深入研究一下
+研究通用对象的传输方案
+
+5.尝试将ClusterInfo/session对象在集群中传输的功能，在SimpleTomcat中调试一下
+
+20210619
+最近在尝试把我们的tomcat工程打包
+打成Jar包，这样我们可以把tomcat部署到各个服务器上去组成一个集群
+用来验证我们的tomcat cluster 集群功能
+
+具体可以参考：
+/Users/zhoushuo/Documents/workspace/TomcatWin/doc/测试案例/
+9003_验证分布式集群同步节点的功能.docx
+
+这个文档详细说明了我们验证的背景、环境、步骤、以及目前碰到的困难
+
+
+20200620
+处理tomcat打包的问题，已经持续好久了，至少有几个星期了。
+这样一个看起来很容易解决的问题，处理了这么久都没有搞定。
+这说明了什么呢？
+1.实际和理论还是有很大的差距
+我们非常轻视乃至于痛恨那些作为的清流派。
+典型的特点就是理论上滔滔不绝，但是实操层面一塌糊涂。
+因此，对于自己，要少说多做，实事求是。
+要求别人做到XXX，必须自己先验证一下、自己先做一遍。
+对于别人，我们要多看看他做了什么，而不是说了什么。
+对于理论、规章制度这些纸面上的东西，我们要独立思考，看看是否具有可行性。
+
+
+
 
 
 

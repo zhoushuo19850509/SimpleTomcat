@@ -4,8 +4,8 @@
   <element>
     <id>Text</id>
     <coordinates>
-      <x>176</x>
-      <y>0</y>
+      <x>66</x>
+      <y>11</y>
       <w>341</w>
       <h>44</h>
     </coordinates>
@@ -16,8 +16,8 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>517</x>
-      <y>319</y>
+      <x>407</x>
+      <y>330</y>
       <w>242</w>
       <h>143</h>
     </coordinates>
@@ -71,8 +71,8 @@ StandardCluster的主要功能是创建集群节点实例
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>385</x>
-      <y>209</y>
+      <x>275</x>
+      <y>220</y>
       <w>319</w>
       <h>132</h>
     </coordinates>
@@ -83,8 +83,8 @@ implements</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>264</x>
-      <y>737</y>
+      <x>154</x>
+      <y>748</y>
       <w>154</w>
       <h>55</h>
     </coordinates>
@@ -103,8 +103,8 @@ send(obj)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>286</x>
-      <y>539</y>
+      <x>176</x>
+      <y>550</y>
       <w>132</w>
       <h>220</h>
     </coordinates>
@@ -115,8 +115,8 @@ implement</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>693</x>
-      <y>737</y>
+      <x>583</x>
+      <y>748</y>
       <w>154</w>
       <h>66</h>
     </coordinates>
@@ -142,8 +142,8 @@ run()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>759</x>
-      <y>539</y>
+      <x>649</x>
+      <y>550</y>
       <w>154</w>
       <h>220</h>
     </coordinates>
@@ -154,8 +154,8 @@ implement</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>495</x>
-      <y>495</y>
+      <x>385</x>
+      <y>506</y>
       <w>154</w>
       <h>55</h>
     </coordinates>
@@ -173,8 +173,8 @@ implement</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>407</x>
-      <y>539</y>
+      <x>297</x>
+      <y>550</y>
       <w>187</w>
       <h>242</h>
     </coordinates>
@@ -185,8 +185,8 @@ extends</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>561</x>
-      <y>539</y>
+      <x>451</x>
+      <y>550</y>
       <w>154</w>
       <h>242</h>
     </coordinates>
@@ -197,8 +197,8 @@ extends</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1243</x>
-      <y>539</y>
+      <x>1133</x>
+      <y>550</y>
       <w>209</w>
       <h>88</h>
     </coordinates>
@@ -230,8 +230,8 @@ clusterReceiver定期会检测来自集群节点的session信息
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1683</x>
-      <y>770</y>
+      <x>1573</x>
+      <y>781</y>
       <w>154</w>
       <h>55</h>
     </coordinates>
@@ -250,8 +250,8 @@ getObjects()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1683</x>
-      <y>550</y>
+      <x>1573</x>
+      <y>561</y>
       <w>154</w>
       <h>55</h>
     </coordinates>
@@ -270,8 +270,8 @@ send(obj)
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1441</x>
-      <y>550</y>
+      <x>1331</x>
+      <y>561</y>
       <w>264</w>
       <h>55</h>
     </coordinates>
@@ -282,8 +282,8 @@ use</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1441</x>
-      <y>561</y>
+      <x>1331</x>
+      <y>572</y>
       <w>264</w>
       <h>264</h>
     </coordinates>
@@ -294,8 +294,8 @@ use</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1683</x>
-      <y>495</y>
+      <x>1573</x>
+      <y>506</y>
       <w>341</w>
       <h>44</h>
     </coordinates>
@@ -307,8 +307,8 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1683</x>
-      <y>715</y>
+      <x>1573</x>
+      <y>726</y>
       <w>374</w>
       <h>44</h>
     </coordinates>
@@ -320,7 +320,7 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLInterface</id>
     <coordinates>
-      <x>638</x>
+      <x>539</x>
       <y>88</y>
       <w>88</w>
       <h>99</h>
@@ -333,8 +333,8 @@ start()</panel_attributes>
   <element>
     <id>UMLInterface</id>
     <coordinates>
-      <x>891</x>
-      <y>88</y>
+      <x>781</x>
+      <y>99</y>
       <w>88</w>
       <h>132</h>
     </coordinates>
@@ -348,8 +348,8 @@ run()
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>682</x>
-      <y>165</y>
+      <x>572</x>
+      <y>176</y>
       <w>121</w>
       <h>176</h>
     </coordinates>
@@ -360,8 +360,8 @@ implements</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>682</x>
-      <y>165</y>
+      <x>572</x>
+      <y>176</y>
       <w>286</w>
       <h>176</h>
     </coordinates>
@@ -372,8 +372,8 @@ implements</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>946</x>
-      <y>363</y>
+      <x>836</x>
+      <y>374</y>
       <w>154</w>
       <h>55</h>
     </coordinates>
@@ -392,8 +392,8 @@ implements</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>748</x>
-      <y>363</y>
+      <x>638</x>
+      <y>374</y>
       <w>220</w>
       <h>55</h>
     </coordinates>
@@ -405,8 +405,8 @@ use
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1683</x>
-      <y>341</y>
+      <x>1573</x>
+      <y>352</y>
       <w>187</w>
       <h>77</h>
     </coordinates>
@@ -425,8 +425,8 @@ getClusterReceiver()
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1683</x>
-      <y>275</y>
+      <x>1573</x>
+      <y>286</y>
       <w>341</w>
       <h>44</h>
     </coordinates>
@@ -437,8 +437,8 @@ style=wordwrap</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1441</x>
-      <y>363</y>
+      <x>1331</x>
+      <y>374</y>
       <w>264</w>
       <h>231</h>
     </coordinates>
@@ -449,8 +449,8 @@ use</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>935</x>
-      <y>297</y>
+      <x>825</x>
+      <y>308</y>
       <w>209</w>
       <h>44</h>
     </coordinates>
@@ -461,8 +461,8 @@ style=wordwrap</panel_attributes>
   <element>
     <id>UMLInterface</id>
     <coordinates>
-      <x>165</x>
-      <y>99</y>
+      <x>55</x>
+      <y>110</y>
       <w>242</w>
       <h>154</h>
     </coordinates>
@@ -477,8 +477,8 @@ getLocalClusterMember()</panel_attributes>
   <element>
     <id>UMLInterface</id>
     <coordinates>
-      <x>781</x>
-      <y>462</y>
+      <x>671</x>
+      <y>473</y>
       <w>132</w>
       <h>99</h>
     </coordinates>
@@ -490,8 +490,8 @@ getObjects()</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>209</x>
-      <y>1166</y>
+      <x>99</x>
+      <y>1177</y>
       <w>154</w>
       <h>55</h>
     </coordinates>
@@ -519,8 +519,8 @@ MulticastSender.send(obj)是MulticastSender对外提供的最常用的功能.
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>770</x>
-      <y>1166</y>
+      <x>660</x>
+      <y>1177</y>
       <w>154</w>
       <h>66</h>
     </coordinates>
@@ -556,8 +556,8 @@ receive()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>462</x>
-      <y>924</y>
+      <x>352</x>
+      <y>935</y>
       <w>176</w>
       <h>66</h>
     </coordinates>
@@ -571,8 +571,8 @@ all-systems.mcast.net
   <element>
     <id>Text</id>
     <coordinates>
-      <x>1012</x>
-      <y>880</y>
+      <x>902</x>
+      <y>891</y>
       <w>517</w>
       <h>319</h>
     </coordinates>
@@ -616,8 +616,8 @@ MulticastSender/MulticastReceiver的名称,
   <element>
     <id>UMLInterface</id>
     <coordinates>
-      <x>231</x>
-      <y>462</y>
+      <x>121</x>
+      <y>473</y>
       <w>132</w>
       <h>99</h>
     </coordinates>
@@ -629,8 +629,8 @@ send()</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>275</x>
-      <y>979</y>
+      <x>165</x>
+      <y>990</y>
       <w>297</w>
       <h>209</h>
     </coordinates>
@@ -641,8 +641,8 @@ ReplicationWrapper</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>550</x>
-      <y>979</y>
+      <x>440</x>
+      <y>990</y>
       <w>319</w>
       <h>209</h>
     </coordinates>
@@ -653,8 +653,8 @@ ReplicationWrapper</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>110</x>
-      <y>979</y>
+      <x>0</x>
+      <y>990</y>
       <w>275</w>
       <h>33</h>
     </coordinates>
@@ -666,8 +666,8 @@ style=wordwrap
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>176</x>
-      <y>1529</y>
+      <x>66</x>
+      <y>1540</y>
       <w>154</w>
       <h>55</h>
     </coordinates>
@@ -696,8 +696,8 @@ clusterSender.send(localClusterMember);
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>737</x>
-      <y>1529</y>
+      <x>627</x>
+      <y>1540</y>
       <w>154</w>
       <h>66</h>
     </coordinates>
@@ -733,8 +733,8 @@ StandardCluster.processReceive()方法中,
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>429</x>
-      <y>1342</y>
+      <x>319</x>
+      <y>1353</y>
       <w>176</w>
       <h>66</h>
     </coordinates>
@@ -748,8 +748,8 @@ all-systems.mcast.net
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>242</x>
-      <y>1397</y>
+      <x>132</x>
+      <y>1408</y>
       <w>297</w>
       <h>154</h>
     </coordinates>
@@ -760,8 +760,8 @@ ReplicationWrapper</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>517</x>
-      <y>1397</y>
+      <x>407</x>
+      <y>1408</y>
       <w>319</w>
       <h>154</h>
     </coordinates>
@@ -772,8 +772,8 @@ ReplicationWrapper</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>176</x>
-      <y>1364</y>
+      <x>66</x>
+      <y>1375</y>
       <w>165</w>
       <h>33</h>
     </coordinates>
@@ -785,8 +785,8 @@ style=wordwrap
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>187</x>
-      <y>1925</y>
+      <x>77</x>
+      <y>1936</y>
       <w>154</w>
       <h>55</h>
     </coordinates>
@@ -815,8 +815,8 @@ MulticastSender.send()方法,发送到组播地址
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>748</x>
-      <y>1925</y>
+      <x>638</x>
+      <y>1936</y>
       <w>154</w>
       <h>66</h>
     </coordinates>
@@ -857,8 +857,8 @@ DistributedManager.processClusterReceiver()
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>440</x>
-      <y>1683</y>
+      <x>330</x>
+      <y>1694</y>
       <w>176</w>
       <h>66</h>
     </coordinates>
@@ -872,8 +872,8 @@ all-systems.mcast.net
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>253</x>
-      <y>1738</y>
+      <x>143</x>
+      <y>1749</y>
       <w>297</w>
       <h>209</h>
     </coordinates>
@@ -884,8 +884,8 @@ ReplicationWrapper</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>528</x>
-      <y>1738</y>
+      <x>418</x>
+      <y>1749</y>
       <w>319</w>
       <h>209</h>
     </coordinates>
@@ -896,8 +896,8 @@ ReplicationWrapper</panel_attributes>
   <element>
     <id>Text</id>
     <coordinates>
-      <x>143</x>
-      <y>1727</y>
+      <x>33</x>
+      <y>1738</y>
       <w>187</w>
       <h>33</h>
     </coordinates>
@@ -909,8 +909,8 @@ style=wordwrap
   <element>
     <id>Text</id>
     <coordinates>
-      <x>990</x>
-      <y>1298</y>
+      <x>880</x>
+      <y>1309</y>
       <w>517</w>
       <h>319</h>
     </coordinates>
