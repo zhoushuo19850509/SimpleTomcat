@@ -5,12 +5,14 @@
 2.mvn clean
 3.mvn compile
 4.mvn package
-5.手工编辑jar包
+5.手工编辑jar包(备注1)
+6.部署servlet(备注2)
+
+备注1 手工编辑jar包
 vi simpletomcat-chap9-1.0-SNAPSHOT.jar
 编辑META-INF/MANIFEST.MF
 
 加入如下的内容：
-lib/servlet-1.0.jar lib/tomcat-util-1.0.jar
 lib/servlet-1.0.jar lib/tomcat-util-1.0.jar
 
 
@@ -34,5 +36,9 @@ lib/servlet-1.0.jar lib/tomcat-util-1.0.jar
 
 
 
-
+备注2 部署servlet
+tomcat最终的功能当然是要能够执行servlet。
+我们把之前准备好的servlet class类，拷贝过去，使得tomcat能够访问这些servlet class
+我们知道，servlet工程和tomcat工程师两个工程，按照道理来说应该分开打包。
+为了方便起见，我们把两个工程放到了一起，一起打包。这个需要特别注意。
 

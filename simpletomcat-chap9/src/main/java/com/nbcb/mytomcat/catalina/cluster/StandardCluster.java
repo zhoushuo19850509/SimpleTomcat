@@ -211,12 +211,14 @@ public class StandardCluster implements Cluster, Lifecycle, Runnable {
             multicastSocket.joinGroup(this.multicastAddress);
 
             /**
-             * 创建ClusterSender对象(MulticastSender)，用于发送节点信息给集群各个节点
+             * 创建ClusterSender对象(MulticastSender)
+             * 用于发送节点信息给集群各个节点
              */
             this.clusterSender = getClusterSender(getName());
 
             /**
-             * 创建ClusterReceiver对象(MuticastReceiver)，用于接收集群其他节点的节点信息
+             * 创建ClusterReceiver对象(MuticastReceiver)
+             * 用于接收集群其他节点的节点信息
              */
             this.clusterReceiver = getClusterReceiver(getName());
 
@@ -264,13 +266,14 @@ public class StandardCluster implements Cluster, Lifecycle, Runnable {
      */
     @Override
     public void run() {
-        processReceive();
-        try {
-            Thread.sleep(Constants.CHECK_INTERVAL);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        while(true){
+            processReceive();
+            try {
+                Thread.sleep(Constants.CHECK_INTERVAL * 1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
-
     }
 
 
@@ -278,18 +281,18 @@ public class StandardCluster implements Cluster, Lifecycle, Runnable {
      * 定期接收
      */
     public void processReceive(){
+
+        // 先尝试接收一下集群其他节点的信息
         Object[] objects = this.clusterReceiver.getObjects();
 
+        // 如果接收到其他节点信息，就放到集合中去
         for(Object object: objects){
             ClusterMemberInfo clusterMemberInfo = (ClusterMemberInfo) object;
             this.clusterMembers.add(clusterMemberInfo);
         }
 
-        /**
-         * 定期打印一下集群中节点的信息
-         */
+        // 定期打印一下集群中节点的信息
         printClusterMembersInfo();
-
     }
 
     public void threadStart(){
@@ -305,7 +308,7 @@ public class StandardCluster implements Cluster, Lifecycle, Runnable {
      */
     public void printClusterMembersInfo(){
 
-        System.out.println("当前集群中节点为：");
+        System.out.println("当前集群中节点为222：");
         for(ClusterMemberInfo clusterMemberInfo: this.clusterMembers){
             /**
              * 打印一下clusterName

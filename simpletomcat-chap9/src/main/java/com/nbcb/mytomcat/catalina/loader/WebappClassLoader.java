@@ -73,6 +73,7 @@ public class WebappClassLoader extends URLClassLoader implements Reloader, Lifec
     public void addRepository(String repository) {
         try {
             this.repository = repository;
+            System.out.println("repository: " + repository);
             repository = (new URL("file",null,
                     repository + File.separator)).toString();
             URLStreamHandler streamHandler = null;

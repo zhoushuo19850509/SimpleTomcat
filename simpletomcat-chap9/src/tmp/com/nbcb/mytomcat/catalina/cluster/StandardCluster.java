@@ -305,7 +305,7 @@ public class StandardCluster implements Cluster, Lifecycle, Runnable {
      */
     public void printClusterMembersInfo(){
 
-        System.out.println("当前集群中节点为：");
+        System.out.println("当前集群中节点为111：");
         for(ClusterMemberInfo clusterMemberInfo: this.clusterMembers){
             /**
              * 打印一下clusterName

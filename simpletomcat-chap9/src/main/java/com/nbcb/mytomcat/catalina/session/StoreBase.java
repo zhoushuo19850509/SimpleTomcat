@@ -101,19 +101,21 @@ public abstract class StoreBase implements Lifecycle ,Store ,Runnable{
          * 打印StoreBase本轮异步线程处理前
          * 在持久化层，有多少session
          */
-        try {
-            System.out.println("StoreBase before run()");
-            System.out.println("[StoreBase]current session count(in file system) : " + keys().length);
-            System.out.println("[StoreBase]current session count(in memory) : " + this.manager.findSessions().size());
-            System.out.println("[StoreBase]current session recycled : " + ((ManagerBase)this.manager).getRecycled().size());
+//        try {
+//            System.out.println("StoreBase before run()");
+//            System.out.println("[StoreBase]current session count(in file system) : " + keys().length);
+//            System.out.println("[StoreBase]current session count(in memory) : " + this.manager.findSessions().size());
+//            System.out.println("[StoreBase]current session recycled : " + ((ManagerBase)this.manager).getRecycled().size());
+//
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
-            /**
-             * 同时，在异步线程处理前，把上一轮异步线程的统计数据清空一下
-             */
-            maxIdleExpireCount = 0;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        /**
+         * 同时，在异步线程处理前，把上一轮异步线程的统计数据清空一下
+         */
+        maxIdleExpireCount = 0;
 
     }
 
@@ -133,12 +135,12 @@ public abstract class StoreBase implements Lifecycle ,Store ,Runnable{
          * 打印StoreBase本轮异步线程处理之后
          * 在持久化层，还剩多少session
          */
-        try {
-            System.out.println("StoreBase after run()");
-            System.out.println("current session count(in file system) : " + keys().length);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            System.out.println("StoreBase after run()");
+//            System.out.println("current session count(in file system) : " + keys().length);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
 
     }
 
@@ -154,7 +156,7 @@ public abstract class StoreBase implements Lifecycle ,Store ,Runnable{
              * 先通过具体的Store实现类，获取持久化层中保存的session的session id列表
              */
             String[] keys = keys();
-            System.out.println("持久化中现在有多少session文件： " + keys.length);
+//            System.out.println("持久化中现在有多少session文件： " + keys.length);
 
             long now = System.currentTimeMillis();
             for(String key: keys){
@@ -176,8 +178,8 @@ public abstract class StoreBase implements Lifecycle ,Store ,Runnable{
                  */
                 long duration = (int) ((now - lastAccessTime) / 1000L);
 
-                System.out.println("session in persistent(sid: " + key + ") " +
-                        " 距离最近一次访问过去了: " +duration + " s" );
+//                System.out.println("session in persistent(sid: " + key + ") " +
+//                        " 距离最近一次访问过去了: " +duration + " s" );
                 int maxInactiveInterval = session.getMaxInactiveInterval();
                 if(duration > maxInactiveInterval){
 
@@ -262,7 +264,7 @@ public abstract class StoreBase implements Lifecycle ,Store ,Runnable{
      */
     @Override
     public void start() throws LifecycleException {
-        System.out.println("start StoreBase !");
+//        System.out.println("start StoreBase !");
         threadStart();
     }
 

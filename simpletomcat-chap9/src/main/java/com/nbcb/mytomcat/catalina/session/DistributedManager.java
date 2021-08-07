@@ -158,13 +158,14 @@ public class DistributedManager extends PersistentManagerBase {
          * 他们的senderId是DistributedManager特有的名字："DistributedManager"
          * 这个senderId作为UDP通信的分组标识，专门用于DistributedManager在集群中共享session信息
          */
-        Cluster cluster = null;
-        cluster = container.getCluster();
-        this.clusterSender = cluster.getClusterSender(getName());
-        this.clusterReceiver = cluster.getClusterReceiver(getName());
+        // 这里先把Distributemanager中的sender/receiver关闭，专门先测试StandardCluster的集群功能，后续再打开
+//        Cluster cluster = null;
+//        cluster = container.getCluster();
+//        this.clusterSender = cluster.getClusterSender(getName());
+//        this.clusterReceiver = cluster.getClusterReceiver(getName());
 
 
-        super.start();
+//        super.start();
 
     }
 
