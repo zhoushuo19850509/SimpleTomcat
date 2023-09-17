@@ -1,7 +1,472 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06691158-1d6b-41bf-a61f-27faedaa5c87" name="Default Changelist" comment="" />
+    <list default="true" id="06691158-1d6b-41bf-a61f-27faedaa5c87" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../doc/readme_new_project.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../doc/readme_new_project.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../simpletomcat-chap9/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/UML/Session.uxf" beforeDir="false" afterPath="$PROJECT_DIR$/../simpletomcat-chap9/UML/Session.uxf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release.tar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/commons-beanutils-1.4.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/commons-codec-1.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/commons-collections-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/commons-daemon-1.2.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/commons-digester-1.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/commons-logging-api-1.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/commons-modeler-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/fluent-hc-4.5.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/httpclient-4.5.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/httpclient-cache-4.5.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/httpclient-osgi-4.5.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/httpclient-win-4.5.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/httpcore-4.4.12.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/httpmime-4.5.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/jakarta-regexp-1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/jna-4.5.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/jna-platform-4.5.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/mx4j-2.0-beta-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/mx4j-jmx-1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/naming-common-5.0.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/naming-factory-5.0.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/naming-resources-5.0.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/servlet-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/tomcat-util-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/xercesImpl-2.7.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/xml-apis-1.0.b2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/lib/xmlParserAPIs-2.2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcat-chap9/release/simpletomcat-chap9-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../simpletomcatchap10/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../simpletomcatchap10/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/doc/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../simpletomcatchap10/doc/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/src/main/java/com/nbcb/mytomcat/catalina/core/StandardContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/../simpletomcatchap10/src/main/java/com/nbcb/mytomcat/catalina/core/StandardContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/src/main/java/com/nbcb/mytomcat/catalina/startup/AAA.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/src/main/java/com/nbcb/mytomcat/catalina/startup/BootStrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../simpletomcatchap10/src/main/java/com/nbcb/mytomcat/catalina/startup/BootStrap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/cluster/Cluster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/cluster/ClusterMemberInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/cluster/ClusterSessionBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/cluster/MulticastReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/cluster/MulticastSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/cluster/StandardCluster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/connector/HttpConnector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/connector/HttpHeader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/connector/HttpProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/connector/HttpRequestImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/connector/HttpRequestLine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/connector/HttpResponseImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/connector/SocketInputStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/connector/StaticResourceProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/core/SimpleContextLifecycleListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/core/SimpleContextMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/core/SimpleContextValve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/core/SimplePipeline$SimplePipelineValveContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/core/SimplePipeline.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/core/SimpleWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/core/SimpleWrapperLifecycleListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/core/SimpleWrapperValve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/core/StandardContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/loader/WebappClassLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/loader/WebappLoader$WebappContextNotifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/loader/WebappLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/session/DistributedManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/session/FileStore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/session/JDBCStore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/session/ManagerBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/session/PersistentManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/session/PersistentManagerBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/session/StandardManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/session/StandardSession.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/session/StoreBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/startup/AAA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/startup/BootStrap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/util/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/util/DefaultHeaders.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/util/FileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/util/LifecycleSupport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/util/ParameterMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/com/nbcb/mytomcat/catalina/util/RequestUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/defaultString/LocalStrings.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/defaultString/LocalStrings_es.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/defaultString/LocalStrings_ja.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Authenticator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Cluster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Connector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Contained.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Container.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ContainerEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ContainerListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ContainerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Context.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/DefaultContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Deployer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Engine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Globals.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Group.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Host.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/HttpRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/HttpResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/InstanceEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/InstanceListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Lifecycle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/LifecycleEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/LifecycleException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/LifecycleListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Loader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Logger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Mapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Pipeline.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Realm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Request.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Response.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Server.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ServerFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Session.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/SessionEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/SessionListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Store.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/UserDatabase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Valve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ValveContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/Wrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/authenticator/AuthenticatorBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/authenticator/BasicAuthenticator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/authenticator/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/authenticator/DigestAuthenticator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/authenticator/FormAuthenticator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/authenticator/NonLoginAuthenticator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/authenticator/SSLAuthenticator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/authenticator/SavedRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/authenticator/SingleSignOn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/authenticator/SingleSignOnEntry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/cluster/ClusterMemberInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/cluster/ClusterReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/cluster/ClusterSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/cluster/ClusterSessionBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/cluster/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/cluster/MulticastReceiver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/cluster/MulticastSender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/cluster/ReplicationWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/cluster/StandardCluster.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/HttpRequestBase$PrivilegedGetSession.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/HttpRequestBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/HttpRequestFacade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/HttpRequestWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/HttpResponseBase$PrivilegedFlushBuffer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/HttpResponseBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/HttpResponseFacade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/HttpResponseWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/RequestBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/RequestFacade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/RequestStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/RequestWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/ResponseBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/ResponseFacade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/ResponseStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/ResponseWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/ResponseWriter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/http/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/http/DefaultHeaders.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/http/HttpConnector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/http/HttpHeader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/http/HttpProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/http/HttpRequestImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/http/HttpRequestLine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/http/HttpRequestStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/http/HttpResponseImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/http/HttpResponseStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/http/SocketInputStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/http10/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/http10/HttpConnector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/http10/HttpProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/http10/HttpRequestImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/connector/http10/HttpResponseImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationContext$PrivilegedGetRequestDispatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationContext$PrivilegedGetResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationContext$PrivilegedGetResourcePaths.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationContext$PrivilegedLogException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationContext$PrivilegedLogMessage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationContext$PrivilegedLogThrowable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationContextFacade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationDispatcher$PrivilegedForward.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationDispatcher$PrivilegedInclude.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationDispatcher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationFilterChain$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationFilterChain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationFilterConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationHttpRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationHttpResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ApplicationResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ContainerBase$PrivilegedAddChild.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/ContainerBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/FastEngineMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/MappingRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/NamingContextListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardContextMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardContextValve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardDefaultContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardEngine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardEngineMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardEngineValve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardHost.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardHostDeployer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardHostMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardHostValve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardPipeline$StandardPipelineValveContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardPipeline.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardWrapperFacade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/core/StandardWrapperValve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/deploy/ApplicationParameter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/deploy/ContextEjb.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/deploy/ContextEnvironment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/deploy/ContextLocalEjb.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/deploy/ContextResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/deploy/ContextResourceLink.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/deploy/ErrorPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/deploy/FilterDef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/deploy/FilterMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/deploy/LoginConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/deploy/NamingResources.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/deploy/ResourceParams.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/deploy/SecurityCollection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/deploy/SecurityConstraint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/deploy/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/loader/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/loader/Extension.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/loader/Reloader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/loader/ResourceEntry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/loader/StandardClassLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/loader/WebappClassLoader$PrivilegedFindResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/loader/WebappClassLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/loader/WebappLoader$WebappContextNotifier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/loader/WebappLoader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/logger/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/logger/FileLogger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/logger/LoggerBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/logger/SystemErrLogger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/logger/SystemOutLogger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/ClassNameMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/ConnectorMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/ContextEnvironmentMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/ContextResourceLinkMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/ContextResourceMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/DefaultContextMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/GlobalResourcesLifecycleListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/GroupMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/MBeanFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/MBeanUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/MemoryUserDatabaseMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/NamingResourcesMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/RoleMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/ServerLifecycleListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/StandardContextMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/StandardEngineMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/StandardHostMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/StandardServerMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/StandardServiceMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/mbeans/UserMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/net/DefaultServerSocketFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/net/SSLServerSocketFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/net/ServerSocketFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/realm/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/realm/GenericPrincipal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/realm/JAASCallbackHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/realm/JAASMemoryLoginModule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/realm/JAASRealm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/realm/JDBCRealm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/realm/JNDIRealm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/realm/MemoryRealm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/realm/MemoryRuleSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/realm/MemoryUserRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/realm/RealmBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/realm/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/realm/UserDatabaseRealm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/CGIServlet$CGIEnvironment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/CGIServlet$CGIRunner$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/CGIServlet$CGIRunner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/CGIServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/DefaultServlet$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/DefaultServlet$Range.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/DefaultServlet$ResourceInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/DefaultServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/HTMLManagerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/InvokerHttpRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/InvokerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/ManagerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/WebdavServlet$LockInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/WebdavServlet$Property.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/WebdavServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/servlets/WebdavStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/session/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/session/DistributedManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/session/FileStore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/session/JDBCStore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/session/ManagerBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/session/PersistentManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/session/PersistentManagerBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/session/StandardManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/session/StandardSession.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/session/StandardSessionContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/session/StandardSessionFacade.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/session/StoreBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/ByteArrayServletOutputStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/ResponseIncludeWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSICommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSIConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSIEcho.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSIExec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSIExternalResolver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSIFlastmod.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSIFsize.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSIInclude.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSIMediator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSIPrintenv.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSIProcessor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSIServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSIServletExternalResolver$ServletContextAndPath.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSIServletExternalResolver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSIServletRequestUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSISet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/ssi/SSIStopProcessingException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/Bootstrap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/BootstrapService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/BootstrapServiceContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/Catalina$CatalinaShutdownHook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/Catalina.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/CatalinaManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/CatalinaManagerMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/CatalinaService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/ClassLoaderFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/ContextConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/ContextRuleSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/CopyParentClassLoaderRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/CreateLoaderRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/Embedded.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/EmbeddedManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/EmbeddedManagerMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/EngineConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/EngineRuleSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/HomesUserDatabase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/HostConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/HostRuleSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/LifecycleListenerRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/NamingRuleSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/PasswdUserDatabase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/SecurityClassLoad.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/SetAuthConstraintRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/SetDistributableRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/SetParentClassLoaderRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/SetPublicIdRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/TldRuleSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/Tool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/UserConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/UserDatabase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/WebRuleSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/startup/WrapperCreateRule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/users/AbstractGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/users/AbstractRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/users/AbstractUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/users/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/users/MemoryGroup.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/users/MemoryGroupCreationFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/users/MemoryRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/users/MemoryRoleCreationFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/users/MemoryUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/users/MemoryUserCreationFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/users/MemoryUserDatabase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/users/MemoryUserDatabaseFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/Base64.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/CGIProcessEnvironment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/CharsetMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/CookieTools.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/CustomObjectInputStream.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/DOMWriter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/DateTool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/Enumerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/FastDateFormat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/FastHttpDateFormat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/HexUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/IOTools.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/InstanceSupport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/LifecycleSupport.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/MD5Encoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/MIME2Java.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/ParameterMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/ProcessEnvironment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/ProcessHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/Queue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/RequestUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/ResourceSet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/ServerInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/Strftime.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/StringManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/StringParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/URL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/URLEncoder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/util/XMLWriter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/valves/AccessLogValve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/valves/CertificatesValve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/valves/CipherData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/valves/Constants$AccessLog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/valves/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/valves/ErrorDispatcherValve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/valves/ErrorReportValve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/valves/JDBCAccessLogValve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/valves/RemoteAddrValve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/valves/RemoteHostValve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/valves/RequestDumperValve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/valves/RequestFilterValve.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/catalina/valves/ValveBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/ContextAccessController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/ContextBindings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/EjbRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/JndiPermission.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/NameParserImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/NamingContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/NamingContextBindingsEnumeration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/NamingContextEnumeration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/NamingEntry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/NamingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/NamingServiceMBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/ResourceEnvRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/ResourceLinkRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/ResourceRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/SelectorContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/StringManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/TransactionRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/java/javaURLContextFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/BaseDirContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/Constants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/DirContextURLConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/DirContextURLStreamHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/DirContextURLStreamHandlerFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/FileDirContext$FileResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/FileDirContext$FileResourceAttributes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/FileDirContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/ProxyDirContext$CacheEntry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/ProxyDirContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/RecyclableNamingEnumeration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/Resource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/ResourceAttributes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/WARDirContext$Entry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/WARDirContext$WARResource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/WARDirContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simpletomcatchap10/target/classes/org/apache/naming/resources/jndi/Handler.class" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,12 +476,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="136" column="10" lean-forward="true" selection-start-line="136" selection-start-column="10" selection-end-line="136" selection-end-column="10" />
+            <state relative-caret-position="487">
+              <caret line="145" column="19" selection-start-line="145" selection-start-column="19" selection-end-line="145" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -24,7 +489,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/nbcb/mytomcat/catalina/startup/BootStrap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
+            <state relative-caret-position="110">
               <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
             </state>
           </provider>
@@ -51,7 +516,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/apache/catalina/mbeans/UserMBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
+            <state relative-caret-position="242">
               <caret line="72" selection-start-line="72" selection-end-line="72" />
             </state>
           </provider>
@@ -68,6 +533,9 @@
     <findStrings>
       <find>add</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -90,11 +558,12 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="158" />
-    <option name="y" value="192" />
+    <option name="x" value="408" />
+    <option name="y" value="249" />
     <option name="width" value="1172" />
     <option name="height" value="824" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -107,6 +576,41 @@
             <path>
               <item name="simpletomcat-chap8" type="b2602c69:ProjectViewProjectNode" />
               <item name="simpletomcat-chap8" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simpletomcat-chap8" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simpletomcat-chap8" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simpletomcat-chap8" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simpletomcat-chap8" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simpletomcat-chap8" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simpletomcat-chap8" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="nbcb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simpletomcat-chap8" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simpletomcat-chap8" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="nbcb" type="462c0819:PsiDirectoryNode" />
+              <item name="mytomcat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="simpletomcat-chap8" type="b2602c69:ProjectViewProjectNode" />
+              <item name="simpletomcat-chap8" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="nbcb" type="462c0819:PsiDirectoryNode" />
+              <item name="mytomcat" type="462c0819:PsiDirectoryNode" />
+              <item name="catalina" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="simpletomcat-chap8" type="b2602c69:ProjectViewProjectNode" />
@@ -179,20 +683,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="158" y="192" width="1172" height="824" extended-state="0" />
+    <frame x="408" y="249" width="1172" height="824" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22300886" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22654867" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.329235" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.329235" />
@@ -200,14 +700,18 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" weight="0.3294686" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.329235" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.3294686" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
   <component name="editorHistoryManager">
@@ -218,8 +722,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nbcb/CCC.java">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="145" column="19" selection-start-line="145" selection-start-column="19" selection-end-line="145" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/nbcb/mytomcat/catalina/startup/BootStrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/nbcb/mytomcat/catalina/core/SimpleContextLifecycleListener.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -237,24 +752,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/apache/catalina/mbeans/UserMBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
+        <state relative-caret-position="242">
           <caret line="72" selection-start-line="72" selection-end-line="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/nbcb/mytomcat/catalina/startup/BootStrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="136" column="10" lean-forward="true" selection-start-line="136" selection-start-column="10" selection-end-line="136" selection-end-column="10" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/com/nbcb/CCC.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

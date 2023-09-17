@@ -61,6 +61,15 @@ public class StandardContext implements Context, Pipeline, Lifecycle {
     protected Cluster cluster;
 
     /**
+     * Securityœ‡πÿ Ù–‘
+     */
+    protected Realm realm = null;
+
+    private LoginConfig loginConfig = null;
+
+
+
+    /**
      * constructor
      */
     public StandardContext(){
@@ -238,11 +247,12 @@ public class StandardContext implements Context, Pipeline, Lifecycle {
 
     @Override
     public LoginConfig getLoginConfig() {
-        return null;
+        return this.loginConfig;
     }
 
     @Override
     public void setLoginConfig(LoginConfig config) {
+        this.loginConfig = config;
 
     }
 
@@ -904,13 +914,15 @@ public class StandardContext implements Context, Pipeline, Lifecycle {
 
     }
 
+
     @Override
     public Realm getRealm() {
-        return null;
+        return this.realm;
     }
 
     @Override
     public void setRealm(Realm realm) {
+        this.realm = realm;
 
     }
 

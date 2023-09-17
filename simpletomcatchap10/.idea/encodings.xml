@@ -4,8 +4,9 @@
     <file url="file://$PROJECT_DIR$/WEB-INF" charset="GBK" />
     <file url="file://$PROJECT_DIR$/lib/servlet.jar" charset="GBK" />
     <file url="file://$PROJECT_DIR$/lib/tomcat-util.jar" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/apache" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/nbcb/mytomcat/catalina/core/SimpleContextValve.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/nbcb/mytomcat/catalina/core/SimpleWrapperValve.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/nbcb/mytomcat/catalina/startup/BootStrap.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/mytomcat" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
   </component>
 </project>

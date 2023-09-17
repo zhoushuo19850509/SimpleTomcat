@@ -1,0 +1,49 @@
+security这个主题，因为之前没有接触到过，所以要参考一些文档
+
+1.《How tomcat works》书本内容
+书本内容还是最权威的，书本介绍了authenticator/realm/
+
+2.
+《How tomcat works》官网代码
+
+3.
+servlet specification
+
+4.《HTTP The Definitive Guide》
+Chapter 11-14
+这个4个章节讨论http协议中安全相关的内容。
+我们知道tomcat是应用层的java容器，实现了http协议
+当然，安全部分也不例外。在http协议的基础上，tomcat开发出了对应的实现。
+书本中的basic authentication/digest authentication/https等内容，
+从协议层面指导tomcat的实现。
+
+比如我们会感到困扰，我们在authenticator中校验的username/password是如何从客户端request请求中解析出来的。
+光看代码，不是很明显。但是我们看了chap12，basic authentication，就能明白是怎么回事。
+无非就是在http header中塞了一个key/value:
+Authorization: Basic YnJpYW4tdG90dHk6T3ch
+备注：其中Basic是指按照basic authentication的方式进行身份验证。
+YnJpYW4tdG90dHk6T3ch是username/passowrd经过base64转码转换而来的。
+
+Digest authentication的意思也很好理解，其实就是为了解决basic authentication的安全性较弱的问题。
+因为basic authentication中只是对username/passowrd进行了简单的处理(经过base64转码)
+Digest authentication的实现方式是客户端先通过哈希算法，把username/passowrd进行哈希处理
+然后发送给服务端，服务端根据之前保存的username/passowrd也进行相同的哈希处理
+如果客户端和服务端的哈希一致，说明认证通过。
+根据哈希不可逆的原理，保证了username/passowrd在传输过程中的安全性。
+
+https直接就从底层传输层提升了交互内容的安全性。
+
+通过以上内容的学习，我们就理解了tomcat各种authentication实现的原理。
+
+4.网文
+https://www.cnblogs.com/xiohao/p/10935004.html
+https://blog.csdn.net/tc2015/article/details/51774454
+
+
+
+
+
+
+
+
+

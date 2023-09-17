@@ -4,10 +4,15 @@ import com.nbcb.mytomcat.catalina.cluster.StandardCluster;
 import com.nbcb.mytomcat.catalina.connector.HttpConnector;
 import com.nbcb.mytomcat.catalina.core.*;
 import com.nbcb.mytomcat.catalina.loader.WebappLoader;
+import com.nbcb.mytomcat.catalina.realm.SimpleRealm;
+import com.nbcb.mytomcat.catalina.realm.SimpleUserDatabaseRealm;
 import com.nbcb.mytomcat.catalina.session.DistributedManager;
 import com.nbcb.mytomcat.catalina.session.FileStore;
 import com.nbcb.mytomcat.catalina.util.Constants;
 import org.apache.catalina.*;
+import org.apache.catalina.deploy.LoginConfig;
+import org.apache.catalina.deploy.SecurityCollection;
+import org.apache.catalina.deploy.SecurityConstraint;
 
 import java.io.IOException;
 
@@ -143,6 +148,40 @@ public class BootStrap {
         cluster.setMulticastPort(Constants.MULTICAST_PORT);
         cluster.setClusterName(Constants.ClUSTER_NAME);
         context.setCluster(cluster);
+
+        /**
+         * 下面是Security相关的代码
+         */
+        // Security component1  : SecurityCollection
+        SecurityCollection securityCollection = new SecurityCollection();
+        securityCollection.addMethod("GET");
+        securityCollection.addPattern("/");
+
+        // Security component2  : SecurityConstraint
+        SecurityConstraint constraint = new SecurityConstraint();
+        constraint.addCollection(securityCollection);
+        constraint.addAuthRole("manager");
+
+        // Security component3  : LoginConfig
+        LoginConfig loginConfig = new LoginConfig();
+        loginConfig.setRealmName("Simple Realm");
+//        loginConfig.setRealmName("Simple User Database Realm");
+
+        // Security component4  : Realm
+        // Realm implement1: SimpleRealm
+        Realm realm = new SimpleRealm();
+
+        // Realm implement2: SimpleUserDatabaseRealm
+//        Realm realm = new SimpleUserDatabaseRealm();
+
+
+        context.setRealm(realm);
+        context.addConstraint(constraint);
+        context.setLoginConfig(loginConfig);
+
+
+
+
 
         try {
             connector.initialize();

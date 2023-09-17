@@ -16,3 +16,6 @@
 6.启动BootStrap.java验证我们发布的servlet是否能够正常访问
 http://localhost:8080/servlet/ModernServlet
 http://localhost:8080/servlet/PrimitiveServlet
+
+经过实际调试，这个方案是可行的
+
