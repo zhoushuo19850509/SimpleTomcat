@@ -1,18 +1,11 @@
 package com.nbcb.mytomcat.catalina.startup;
 
-import com.nbcb.mytomcat.catalina.cluster.StandardCluster;
+import com.nbcb.mytomcat.catalina.authenticator.BasicAuthenticator;
 import com.nbcb.mytomcat.catalina.connector.HttpConnector;
 import com.nbcb.mytomcat.catalina.core.*;
 import com.nbcb.mytomcat.catalina.loader.WebappLoader;
-import com.nbcb.mytomcat.catalina.realm.SimpleRealm;
-import com.nbcb.mytomcat.catalina.realm.SimpleUserDatabaseRealm;
-import com.nbcb.mytomcat.catalina.session.DistributedManager;
-import com.nbcb.mytomcat.catalina.session.FileStore;
-import com.nbcb.mytomcat.catalina.util.Constants;
 import org.apache.catalina.*;
 import org.apache.catalina.deploy.LoginConfig;
-import org.apache.catalina.deploy.SecurityCollection;
-import org.apache.catalina.deploy.SecurityConstraint;
 
 import java.io.IOException;
 
@@ -102,85 +95,36 @@ public class BootStrap {
         // FileLogger对象会用到这个值，后续会把日志放到这个路径下
         // 也就是本工程的地址： /Users/zhoushuo/Documents/workspace/TomcatWin
         System.setProperty("catalina.base",System.getProperty("user.dir"));
-//        FileLogger logger = new FileLogger();
-//
-//        // 设置日志文件名称
-//        logger.setPrefix("MyFileLog_");
-//        logger.setSuffix(".log");
-//
-//        // 日志文件中是否打印时间戳
-//        logger.setTimestamp(true);
-//
-//
-//        // 日志打印在哪个具体的目录下
-//        logger.setDirectory("webroot");
-//        context.setLogger(logger);
-//
-//        logger.log("hello FileLogger");
-
-        /**
-         * 设置context的manager
-         * 用于后续servlet类通过context获取manager类，继而访问session对象
-         */
-        /**
-         * Manager1 StandardManager
-         */
-//        Manager manager = new StandardManager();
-
-        /**
-         * Manager2 PersistentManager
-         */
-//        PersistentManager manager = new PersistentManager();
-//        manager.setStore(new FileStore());
-
-        /**
-         * Manager3 DistributedManager
-         */
-        DistributedManager manager = new DistributedManager();
-        manager.setStore(new FileStore());
-        context.setManager(manager);
-
-        /**
-         * 如果是选择DistributedManager，那么就要指定集群
-         */
-        StandardCluster cluster = new StandardCluster();
-        cluster.setMulticastAddress(Constants.MULTICAST_ADDRESS);
-        cluster.setMulticastPort(Constants.MULTICAST_PORT);
-        cluster.setClusterName(Constants.ClUSTER_NAME);
-        context.setCluster(cluster);
 
         /**
          * 下面是Security相关的代码
          */
-        // Security component1  : SecurityCollection
-        SecurityCollection securityCollection = new SecurityCollection();
-        securityCollection.addMethod("GET");
-        securityCollection.addPattern("/");
-
-        // Security component2  : SecurityConstraint
-        SecurityConstraint constraint = new SecurityConstraint();
-        constraint.addCollection(securityCollection);
-        constraint.addAuthRole("manager");
-
-        // Security component3  : LoginConfig
         LoginConfig loginConfig = new LoginConfig();
-        loginConfig.setRealmName("Simple Realm");
-//        loginConfig.setRealmName("Simple User Database Realm");
 
-        // Security component4  : Realm
-        // Realm implement1: SimpleRealm
-        Realm realm = new SimpleRealm();
+        /**
+         * 这个就是我们在security中讨论的authenticator接口的实现类
+         * 我们自己实现了BasicAuthenticator,那么在初始化的时候，就把authMethod设置为BASIC
+         * 当然还有其他实现类。具体如下：
+         *
+         * The authentication method to use for application login.  Must be
+         * BASIC, DIGEST, FORM, or CLIENT-CERT.
+         */
+        String authMethod = "BASIC";
 
-        // Realm implement2: SimpleUserDatabaseRealm
-//        Realm realm = new SimpleUserDatabaseRealm();
+        /**
+         * 这个就是我们在security中讨论的Realm接口的实现类
+         * 我们自己实现了 SimpleRealm,那么在初始化的时候，就把realName设置为SimpleRealm
+         * 当然还有其他实现类比如：
+         * DataSourceRealm
+         * MemoryRealm
+         * 等等
+         */
+        String realmName = "SimpleRealm";
 
+        loginConfig.setRealmName(realmName);
+        loginConfig.setAuthMethod(authMethod);
 
-        context.setRealm(realm);
-        context.addConstraint(constraint);
         context.setLoginConfig(loginConfig);
-
-
-
 
 
         try {

@@ -1,6 +1,7 @@
 package com.nbcb.mytomcat.catalina.core;
 
 import com.nbcb.mytomcat.catalina.session.PersistentManager;
+import com.nbcb.mytomcat.catalina.startup.ContextConfig;
 import org.apache.catalina.*;
 import org.apache.catalina.deploy.*;
 import org.apache.catalina.util.CharsetMapper;
@@ -1069,6 +1070,13 @@ public class StandardContext implements Context, Pipeline, Lifecycle {
         if(pipeline instanceof Lifecycle){
             ((Lifecycle)pipeline).start();
         }
+
+        /**
+         * StandardContext启动的时候，也初始化一下ContextConfig
+         * 后续参考tomcat官方实现，以事件的方式启动ContextConfig
+         */
+        ContextConfig contextConfig = new ContextConfig(this);
+        ((Lifecycle)contextConfig).start();
 
         lifecycle.fireLifecycleEvent(START_EVENT,null);
 
