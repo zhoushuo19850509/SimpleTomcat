@@ -98,9 +98,9 @@ public class PersistentManagerBase extends ManagerBase
         /**
          * 在异步线程处理前，内存中的session有多少
          */
-        System.out.println("PersistentManagerBase before run()");
-        System.out.println("current session count(in memory) : " + this.findSessions().size());
-        System.out.println("current session count(recycled) : " + super.getRecycled().size());
+//        System.out.println("PersistentManagerBase before run()");
+//        System.out.println("current session count(in memory) : " + this.findSessions().size());
+//        System.out.println("current session count(recycled) : " + super.getRecycled().size());
 
         /**
          * 本次异步线程处理前，先把上一次异步线程的数据清理一下
@@ -122,9 +122,9 @@ public class PersistentManagerBase extends ManagerBase
         /**
          * 在异步线程处理后，保留在内存中的session还剩多少
          */
-        System.out.println("PersistentManagerBase after run()");
-        System.out.println("current session count(in memory) : " + super.findSessions().size());
-        System.out.println("current session count(recycled) : " + super.getRecycled().size());
+//        System.out.println("PersistentManagerBase after run()");
+//        System.out.println("current session count(in memory) : " + super.findSessions().size());
+//        System.out.println("current session count(recycled) : " + super.getRecycled().size());
 
         /**
          * 如果内存中有session信心，就打印一下sid
@@ -154,16 +154,16 @@ public class PersistentManagerBase extends ManagerBase
          * MAX_IDLE_SWAP = 30
          * 目前是30s
          */
-        System.out.println("PersistentManagerBase 将那些空闲时间过长的session放到持久层。" +
-                "数据条数： " + this.maxIdleSwapCount);
+//        System.out.println("PersistentManagerBase 将那些空闲时间过长的session放到持久层。" +
+//                "数据条数： " + this.maxIdleSwapCount);
 
         /**
          * 本轮异步线程，有多少session是因为内存中session过多，被swap out to persistence
          * 最多线程数参考： Constants.MAX_ACTIVE_SESSIONS
          *  目前是50个
          */
-        System.out.println("PersistentManagerBase 将那些内存中过多的session放到持久层。" +
-                "数据条数： " + this.maxActiveSwapCount);
+//        System.out.println("PersistentManagerBase 将那些内存中过多的session放到持久层。" +
+//                "数据条数： " + this.maxActiveSwapCount);
 
         /**
          * 本轮异步线程，有多少线程是因为IDLE时间过长，被backup to persistence
