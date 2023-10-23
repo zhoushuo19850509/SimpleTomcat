@@ -33,6 +33,10 @@ public class ContextConfig implements Lifecycle {
     public void authenticatorConfig(){
 
         LoginConfig loginConfig = context.getLoginConfig();
+        if(null == loginConfig){
+            System.out.println("未配置security相关的参数，退出authenticatorConfig() 。。。");
+            return;
+        }
 
         if(loginConfig.getAuthMethod().equals("BASIC")){
             Realm realm = new SimpleRealm();

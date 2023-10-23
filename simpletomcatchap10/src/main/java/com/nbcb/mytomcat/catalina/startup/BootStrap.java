@@ -124,7 +124,11 @@ public class BootStrap {
         loginConfig.setRealmName(realmName);
         loginConfig.setAuthMethod(authMethod);
 
-        context.setLoginConfig(loginConfig);
+        /**
+         * 如果后续不希望authentication部分的代码干扰其他功能，
+         * 就把下面这句代码注释掉就行了
+         */
+//        context.setLoginConfig(loginConfig);
 
 
         try {
