@@ -1,0 +1,84 @@
+package com.nbcb.mytomcat.catalina.core;
+
+import org.apache.catalina.*;
+
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+/**
+ * The basic valve of SimpleContext's pipeline
+ */
+public class SimpleContextValve implements Valve, Contained {
+
+    private Container container;
+
+    @Override
+    public Container getContainer() {
+        return container;
+    }
+
+    @Override
+    public void setContainer(Container container) {
+         this.container = container;
+    }
+
+    @Override
+    public String getInfo() {
+        return null;
+    }
+
+    /**
+     * 这个方法
+     * @param request The servlet request to be processed
+     * @param response The servlet response to be created
+     * @param valveContext
+     * @throws IOException
+     * @throws ServletException
+     */
+    @Override
+    public void invoke(Request request, Response response, ValveContext valveContext) throws IOException, ServletException {
+
+        /**
+         * 首先获取当前Valve挂靠在哪个container下
+         */
+        Context context = (Context) getContainer();
+
+        ServletRequest sreq = request.getRequest();
+        ServletResponse sres = response.getResponse();
+
+        if( !(sreq instanceof HttpServletRequest) ||
+                !(sres instanceof HttpServletResponse)){
+            return;
+        }
+
+        /**
+         * 在执行servlet之前，如果这个客户端之前已经创建了session会话
+         * 就调用一下session.access()
+         */
+        String sid = ((HttpServletRequest) sreq).getRequestedSessionId();
+        if(null != sid){
+            Manager manager = context.getManager();
+            Session session = manager.findSession(sid);
+            if(null != session && session.isValid()){
+                session.access();
+            }
+
+        }
+
+        /**
+         * 根据client's request url获取对应Servlet处理类：Wrapper
+         */
+        Wrapper wrapper = null;
+        wrapper = (Wrapper) context.map(request,true);
+
+        /**
+         * 然后通过调用Wrapper.invoke()调用Servlet实例
+         */
+        response.setContext(context);
+        wrapper.invoke(request,response);
+    }
+}
